@@ -1,0 +1,134 @@
+/* Schrift: 'Cormorant Garamond'
+Farben: rgb(233, 233, 224), #333
+ */
+@font-face {
+    font-family: Cormorant;
+    src: url("https://fonts.google.com/specimen/Cormorant+Garamond?query=Cormorant+Garamond")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cormorant;
+}
+body {
+    background-color: rgb(233, 233, 224);
+
+}
+header{
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+}
+header h1::first-letter {
+    font-size: 44px;
+}
+header h1 {
+    margin: 0.5em auto;
+    font-weight: bold!important;
+}
+header nav {
+    display:flex;
+    justify-content: space-between;
+    border-top: solid black;
+    border-top-style: double;
+    border-bottom: solid black;
+    border-bottom-style: double;
+}
+header nav p {
+    margin: 0 auto;
+}
+main {
+    width: 95%;
+    margin: 0 auto;
+    display:grid;
+    gap: 10px;
+    grid-template-areas: 
+    "überschrift überschrift überschrift"
+    "text bild boxen"
+    ;
+}
+section.überschrift{
+    display: flex;
+    justify-content: space-around;
+    grid-area: überschrift;
+    margin: 1% 0;
+}
+section.überschrift h1 {
+    margin-left: 5%;
+    font-size: 32px;
+}
+section.überschrift h2 {
+    font-size: 16px;
+    padding-left:8%;
+    align-self: end;
+}
+
+section.text{
+    width: 500px;
+    grid-area: text;
+    display: grid;
+    gap:10px;
+    grid-template:0.75fr 1.5fr auto/1fr 1fr  ;
+}
+section.text article {
+    height: fit-content;
+}
+section.text article h3 {
+    font-size: 24px;
+}
+figure.bild {
+    grid-area: bild;
+
+}
+figure.bild img {
+    width: 525px;
+}
+
+section.boxen {
+    grid-area: boxen;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+section.boxen div {
+    border: 5px double black;
+    width: 200px;
+    height:200px;
+}
+section.boxen div:nth-of-type(1)
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.boxen div:nth-of-type(2) {
+    text-align: center;
+}
+section.boxen div:nth-of-type(2) h3 {
+    font-size: 20px;
+    margin-top: 1rem;
+}
+section.boxen div h2 {
+    text-align: center;
+    font-size: 48px;
+}
+
+div.logo {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+img.logo {
+    width: 150px;
+    height: 150px;
+    filter: saturate(0);
+}
+a {
+    color:#333;
+    border-bottom: 1.8px solid;
+    border-spacing: 1px;
+    font-size: 18px;
+    padding: 0 1px
+}
